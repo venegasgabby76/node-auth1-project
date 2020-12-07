@@ -13,11 +13,11 @@ exports.up = function(knex) {
       tbl.string("password", 256).notNullable();
 
       tbl
-      .interger("role")
-      .unsigned()
-      .refernces("roles.id")
-      .onDelete("RESTRICT")
-      .onUpdate("CASCADE");
+        .integer("role")
+        .unsigned()
+        .references("roles.id")
+        .onDelete("RESTRICT")
+        .onUpdate("CASCADE");
   })
 };
 
